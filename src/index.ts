@@ -21,6 +21,31 @@ app.get("/api", (req: Request, res: Response) => {
 app.get("/api/data", (req: Request, res: Response) => {
     const { method } = req.query; // get sorting method
 
+	// catch invalid messages
+    if (method && method !== "quicksort" && method !== "radixsort") {
+        res.status(400).send("Invalid sorting method");
+    }
+
+    res.send(getProcessedData(method as string));
+});
+
+// gets the rating given a time frame in days
+app.get("/api/rating", (req: Request, res: Response) => {
+    const stocks = getProcessedData(); // Unsorted data
+    const { range, company } = req.query;
+    const stock = stocks.find((stock) => stock.ticker === company);
+    if (!stock) {
+        res.send({ error: "Company not found" });
+        return;
+    }
+
+    let rangeNum = 30;
+    try {
+        rangeNum = parseInt(range as string);
+    } catch (err) {
+        res.send({ error: "Invalid range" });
+        return;
+    }
 
     res.send({ investmentRating: findInvestmentRating(stock?.data, rangeNum) });
 });
