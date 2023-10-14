@@ -1,6 +1,6 @@
 ## Overview
 
-The "Stock Market Suggestions" project provides an automated investment rating system for various stocks based on historical data, aiming to simplify the process of stock investment for traders and investors of all levels.
+The "Market Forecasts" project provides an automated investment rating system for various stocks based on historical data, aiming to simplify the process of stock investment for traders and investors of all levels.
 
 ## Key Features
 
