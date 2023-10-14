@@ -5,7 +5,9 @@ The "Market Forecasts" project provides an automated investment rating system fo
 ## Key Features
 
 Investment Rating Calculation: Dynamically assesses and rates stock investment value by considering the discount cash flow and stock price over a specified time range.
+
 Data Formatting and Processing: Handles raw stock data, transforming it into a structured format, and further processes it to extract vital stock information.
+
 Sorting Algorithms: Implements QuickSort and RadixSort for ordering stock data based on date, ensuring accurate temporal analyses.
 
 ## Technological Stack
