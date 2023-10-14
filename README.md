@@ -1,9 +1,19 @@
-# COP3530 Project3
+## Overview
 
+The "Market Forecasts" project provides an automated investment rating system for various stocks based on historical data, aiming to simplify the process of stock investment for traders and investors of all levels.
+
+## Key Features
+
+Investment Rating Calculation: Dynamically assesses and rates stock investment value by considering the discount cash flow and stock price over a specified time range.
+
+Data Formatting and Processing: Handles raw stock data, transforming it into a structured format, and further processes it to extract vital stock information.
+
+Sorting Algorithms: Implements QuickSort and RadixSort for ordering stock data based on date, ensuring accurate temporal analyses.
+
+## Technological Stack
 Project created using TypeScript, Express, and `create-react-app`. This application is structured in the following way:
 
 ## Source folder
-
 - `src`: contains all the code
   - `index.ts` is the main server file
   - `types` contains all TypeScript types
