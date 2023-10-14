@@ -43,6 +43,28 @@ const partitionDates = (
 };
 
 /**
+ * Quick sort helper function
+ *
+ * @param arr array of datum
+ * @param low low index
+ * @param high high index
+ */
+const quickSortDatesHelper = (
+    arr: Array<Datum>,
+    low: number = 0,
+    high: number = arr.length - 1
+): void => {
+    if (low < high) {
+        // Partition index
+        let pivot = partitionDates(arr, low, high);
+
+        // Recursively partition of the array
+        quickSortDatesHelper(arr, low, pivot - 1);
+        quickSortDatesHelper(arr, pivot + 1, high);
+    }
+};
+
+/**
  * Quick sort
  *
  * @param arr array of datum
